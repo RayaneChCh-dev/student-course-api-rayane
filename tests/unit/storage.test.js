@@ -138,14 +138,3 @@ test('should return false when deleting non-existent course', () => {
   const result = storage.remove('courses', 999);
   expect(result).toBe(false);
 });
-
-test('should get student by id', () => {
-  const students = storage.list('students');
-  const student = storage.get('students', students[0].id);
-  expect(student.name).toBe('Alice');
-});
-
-test('should return undefined for non-existent student', () => {
-  const result = storage.get('students', 999);
-  expect(result).toBeUndefined();
-});

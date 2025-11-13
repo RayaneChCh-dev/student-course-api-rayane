@@ -275,7 +275,6 @@ describe('Student-Course API integration', () => {
     });
   });
 
-  // ========== ERROR HANDLING TESTS ==========
   describe('Error handling', () => {
     test('GET /nonexistent should return 404', async () => {
       const res = await request(app).get('/nonexistent');
